@@ -1,7 +1,16 @@
-# Tree-Based Content Management System (TreeCMS)
-## Coding Skills 2 – Desktop Application Project
+# Tree-Based Content Management System (TreeCMS) - Version 2
+## Coding Skills 2 – Desktop Application Project (V2)
 
 A desktop content management system developed in **C#** and **Windows Forms (WinForms)** for **Visual Studio 2026 / 2022**. The application organizes content into categories and subcategories using a hierarchical tree structure, backed entirely by a **simple text-file and local directory storage system** without databases, complex architectures, or external APIs.
+
+### 🌟 New in Version 2 (Faculty Requested Features):
+- **Right-Click Context Menu on TreeView Nodes:**
+  - **Add Child Node**: Directly adds a subcategory under the right-clicked node.
+  - **Rename Node**: Quickly prompts to rename the right-clicked node.
+  - **Delete Node**: Prompts for confirmation and deletes the node and all sub-content.
+- **Right-Click on Empty TreeView Space:**
+  - Automatically displays **Add Root Node** to easily create a new top-level category anywhere in the tree view area.
+
 
 ---
 

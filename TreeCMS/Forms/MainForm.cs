@@ -366,6 +366,75 @@ namespace TreeCMS.Forms
             treeViewCategories.CollapseAll();
         }
 
+        #region TreeView Context Menu Event Handlers
+
+        private void TreeViewCategories_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                treeViewCategories.SelectedNode = e.Node;
+            }
+        }
+
+        private void ContextMenuTree_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Point clientPos = treeViewCategories.PointToClient(Cursor.Position);
+            TreeNode targetNode = treeViewCategories.GetNodeAt(clientPos);
+
+            if (targetNode != null)
+            {
+                // Right-clicked directly on a node
+                treeViewCategories.SelectedNode = targetNode;
+                menuItemCtxAddChild.Visible = true;
+                menuItemCtxRename.Visible = true;
+                menuItemCtxDelete.Visible = true;
+                toolStripSeparatorCtx.Visible = false;
+                menuItemCtxAddRoot.Visible = false;
+            }
+            else
+            {
+                // Right-clicked on empty TreeView space
+                menuItemCtxAddChild.Visible = false;
+                menuItemCtxRename.Visible = false;
+                menuItemCtxDelete.Visible = false;
+                toolStripSeparatorCtx.Visible = false;
+                menuItemCtxAddRoot.Visible = true;
+            }
+        }
+
+        private void MenuItemCtxAddChild_Click(object sender, EventArgs e)
+        {
+            BtnAddChild_Click(sender, e);
+        }
+
+        private void MenuItemCtxRename_Click(object sender, EventArgs e)
+        {
+            if (_selectedNode == null || treeViewCategories.SelectedNode == null)
+            {
+                MessageBox.Show("Please select a node to rename.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string newName = PromptInput("Enter new name for node '" + _selectedNode.Name + "':", "Rename Node");
+            if (!string.IsNullOrWhiteSpace(newName))
+            {
+                txtRenameNode.Text = newName.Trim();
+                BtnUpdateNodeName_Click(sender, e);
+            }
+        }
+
+        private void MenuItemCtxDelete_Click(object sender, EventArgs e)
+        {
+            BtnDeleteNode_Click(sender, e);
+        }
+
+        private void MenuItemCtxAddRoot_Click(object sender, EventArgs e)
+        {
+            BtnAddRoot_Click(sender, e);
+        }
+
+        #endregion
+
         #endregion
 
         #region Hyperlinks Operations
