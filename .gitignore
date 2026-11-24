@@ -1,0 +1,14 @@
+# Visual Studio / Build artifacts
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.userprefs
+*.suo
+*.sln.docstates
+*.DotSettings.user
+*.patch
+*.diff
+
+TreeCMS/bin/
+TreeCMS/obj/

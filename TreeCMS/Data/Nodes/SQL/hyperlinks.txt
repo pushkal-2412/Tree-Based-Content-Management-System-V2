@@ -1,0 +1,1 @@
+﻿SQL Syntax Guide|https://www.w3schools.com/sql/

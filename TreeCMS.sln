@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCMS", "TreeCMS\TreeCMS.csproj", "{4A54B98E-6C4F-4E38-9B2D-0824B712A8DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A54B98E-6C4F-4E38-9B2D-0824B712A8DE}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{4A54B98E-6C4F-4E38-9B2D-0824B712A8DE}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{4A54B98E-6C4F-4E38-9B2D-0824B712A8DE}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{4A54B98E-6C4F-4E38-9B2D-0824B712A8DE}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
